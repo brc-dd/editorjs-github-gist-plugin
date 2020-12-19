@@ -26,7 +26,12 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader?removeSVGTagAttrs=false'
+        use: [{
+          loader: 'svg-inline-loader',
+          options: {
+            removeSVGTagAttrs: false,
+          }
+        }],
       },
       {
         test: /\.(js)$/,

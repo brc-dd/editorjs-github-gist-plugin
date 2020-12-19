@@ -75,4 +75,13 @@ export default class Gist {
       height: parseInt(blockContent.querySelector('#gist-height-input').value)
     }
   }
+
+  /**
+   * Notify core that read-only mode is supported
+   *
+   * @returns {boolean}
+   */
+  static get isReadOnlySupported() {
+    return true;
+  }
 }
